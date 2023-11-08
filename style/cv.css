@@ -1,0 +1,53 @@
+h3 {color: darkred;
+    font-size: 2.5rem;/*rem pour adapter à tout kles appareil ou em*/
+
+}
+#gogo {width: 200px;
+    height: 200px;
+
+}
+
+h4 {color: rgb(220, 20, 20);
+    font-size: 2rem;
+}
+
+body {background-color: lightgray;
+}
+
+#Coordonnees {background-color: antiquewhite;
+            border: black 3px solid;
+            width: 20%;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 2.5px 5px;
+            transition: 1s;
+            margin-bottom: 5%;
+            
+
+}
+#Coordonnees:hover {background-color: blueviolet;
+                transform: translate3d(10px, 10px, 0px);
+                transition: 1s
+
+}
+
+#Experiences {background-color: aliceblue;
+            border: black 3px solid;
+            background-size: contain;
+            width: 45%;
+            border-radius: 10px;
+            font-family: cursive;
+            margin-bottom: 5%;
+
+}
+
+#formations {
+    background-color: aliceblue;
+    border: black 3px solid;
+    background-size: contain;
+    width: 45%;
+    border-radius: 10px;
+    font-family: cursive;
+    
+
+}
