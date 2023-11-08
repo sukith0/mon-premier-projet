@@ -5,7 +5,12 @@
 
 @font-face {
     font-family: "minecraft";
-    src: url(../assets/Minercraftory.ttf);
+    src: url(../assets/Minercraftory.ttf); /* création de police*/
+}
+
+@font-face {
+    font-family: "yo";
+    src: url(../assets/University.otf);
 }
 
 
@@ -19,17 +24,20 @@
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex; /*autoriser une liberté dans la box*/
+    flex-direction: column; /* agencement */
+    justify-content: center; /* vertical alignement*/
+    align-items: center; /* aligner en ligne*/
 
-    width: 100%;
+    width: 100vw;
     height: 20vh; /*vh pourcentage d'écran*/
     background-color: rgb(78, 0, 0);
     color: antiquewhite;
     font-family: fantasy;
-    background;
+    background-image:url(../assets/reeed.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 
 }
 
@@ -56,5 +64,62 @@ body {
 
 footer {
     background-color: antiquewhite;
+
+}
+
+iframe {
+    margin-top: 100%;
+    margin-left: 5%;
+
+
+}
+
+#discord {
+    transition: 1s;
+}
+
+#discord:hover {
+    transform: translate3d(20px, 20px, 0px);
+    transition: 1s;
+
+
+}
+
+nav {
+    height: 90vh;
+    width: 20vw;
+    color: antiquewhite;
+    background-color: rgb(202, 0, 0);
+    background: linear-gradient(to right, rgb(146, 0, 0), black);
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 83, 20);
+    gap: 5vh;
+    
+    
+    
+    
+}
+
+.bouton {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    background-color: rgb(100, 46, 46);
+    border-radius: 0.5vh;
+    padding: 2vh;
+    text-align: center;
+    font-family: "yo";
+    border: rgb(210, 210, 210) 1px solid;
+    transition: 0.5s;
+
+
+}
+
+.bouton:hover {
+    background-color: rgb(139, 0, 0);
+    box-shadow: whitesmoke 5px 5px 10px 0px; /* x, y, largeur de diffusion de l'ombre*/
+    transition: 0.5s;
+
 
 }
