@@ -68,14 +68,22 @@ footer {
 }
 
 iframe {
-    margin-top: 100%;
+    margin-top: 5%;
     margin-left: 5%;
 
 
 }
 
-#discord {
+/*iframe:hover {
     transition: 1s;
+    height: 500;
+
+}*/
+
+#discord {
+    margin-bottom: vh;
+    transition: 1s;
+
 }
 
 #discord:hover {
@@ -86,7 +94,7 @@ iframe {
 }
 
 nav {
-    height: 90vh;
+    height: 150vh;
     width: 20vw;
     color: antiquewhite;
     background-color: rgb(202, 0, 0);
@@ -111,7 +119,8 @@ nav {
     text-align: center;
     font-family: "yo";
     border: rgb(210, 210, 210) 1px solid;
-    transition: 0.5s;
+    transition: 0.2s;
+    
 
 
 }
@@ -119,7 +128,32 @@ nav {
 .bouton:hover {
     background-color: rgb(139, 0, 0);
     box-shadow: whitesmoke 5px 5px 10px 0px; /* x, y, largeur de diffusion de l'ombre*/
-    transition: 0.5s;
+    transition: 0.2s;
+    transform: translate3d(10px, 10px, 0px);
 
+
+}
+
+#onclick {
+    text-decoration: none;
+            color: rgb(0, 0, 0);
+            display: block;
+            background-color: rgb(100, 46, 46);
+            border-radius: 0.5vh;
+            padding: 2vh;
+            text-align: center;
+            border: rgb(210, 210, 210) 1px solid;
+            transition: 0.2s;
+            cursor: pointer;
+            font-family: "yo";
+            transition: 0.2s;
+}
+
+#onclick:hover {
+
+    background-color: rgb(139, 0, 0);
+    box-shadow: whitesmoke 5px 5px 10px 0px; /* x, y, largeur de diffusion de l'ombre*/
+    transition: 0.2s;
+    transform: translate3d(10px, 10px, 0px);
 
 }
