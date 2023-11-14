@@ -1,6 +1,6 @@
 @font-face {
         font-family: "goofy";
-        src: url("../assets/Super\ Sedan.ttf");
+        src: url("../assets/WholecarWhite_PERSONAL_USE_ONLY.otf");
     }
 
 @font-face {
@@ -28,6 +28,7 @@ header {
     flex-direction: column; /* agencement */
     justify-content: center; /* vertical alignement*/
     align-items: center; /* aligner en ligne*/
+    position: fixed;
 
     width: 100vw;
     height: 20vh; /*vh pourcentage d'écran*/
@@ -37,7 +38,8 @@ header {
     background-image:url(../assets/reeed.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
+    z-index: 10;
 
 }
 
@@ -78,7 +80,7 @@ iframe {
     transition: 1s;
     height: 500;
 
-}*/
+}
 
 #discord {
     margin-bottom: vh;
@@ -91,7 +93,7 @@ iframe {
     transition: 1s;
 
 
-}
+}*/
 
 nav {
     height: 150vh;
@@ -103,6 +105,10 @@ nav {
     flex-direction: column;
     color: rgb(255, 83, 20);
     gap: 5vh;
+    position: fixed;
+    top: 20vh;
+    z-index: 10;
+    
     
     
     
@@ -120,6 +126,9 @@ nav {
     font-family: "yo";
     border: rgb(210, 210, 210) 1px solid;
     transition: 0.2s;
+    margin-top: 30px;
+    width: 25vh;
+    margin-left: 5vh;
     
 
 
@@ -147,6 +156,8 @@ nav {
             cursor: pointer;
             font-family: "yo";
             transition: 0.2s;
+            width: 25vh;
+            margin-left: 5vh;
 }
 
 #onclick:hover {
@@ -157,3 +168,32 @@ nav {
     transform: translate3d(10px, 10px, 0px);
 
 }
+
+main {
+    width: 80vw/*pourcentage décran*/;
+    position: relative;
+    top: 20vh;
+    left: 20vw;
+    width: 80vw;
+
+
+}
+
+
+footer {
+    position: fixed;
+    background-image:url("../assets/footer.png");
+    background-color: rgba(165, 42, 42, 0);
+    z-index: 10;
+    bottom: 0;
+    left: 20vw;
+    height: 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80vw;
+    
+
+}
+
+
+

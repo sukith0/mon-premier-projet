@@ -1,35 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>root</title>
-<link rel="stylesheet" href="../style/idk.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/idk.css">
+  <title>Menu Déroulant</title>
 </head>
 <body>
-<div id="boxe-overlay"></div>
-<div id="boxe-console">
-<div id="loading">Waiting for connection<font id="dot"></font></div>
-<div id="first"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="65170a0a11250a10110904121f4b15170a">[email&#160;protected]</a>'s password:<br/>
-Linux vps521928 4.9.0-6-amd64 #1 SMP Debian 4.9.88-1+deb9u1 (2018-05-07) x86_64<br/><br/>
-The programs included with the Debian GNU/Linux system are free software;<br/>
-the exact distribution terms for each program are described in the<br/>
-individual files in /usr/share/doc/*/copyright.<br/><br/>
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent<br/>
-permitted by applicable law.<br/>
-Last login: Thursday 9th of November 2023 15:06:46 PM from 172.71.123.172<br/></div>
-<div id="bloc-command">
-<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="86f4e9e9f2c6e9f3f2eae7f1fca8f6f4e9">[email&#160;protected]</a>:~# <input id="txt" type="text" name="command" value /><span class="blinking-cursor">█</span>
-</div>
-</div>
-
-<div id="boxe-battery">
-<font></font>
-<i class="fa fa-battery-empty"></i>
-</div>
-<input type="hidden" name="command">
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="assets/js/jquery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
-<script type="text/javascript" src="assets/js/battery.js"></script>
+  <div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
 </body>
 </html>

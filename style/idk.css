@@ -1,152 +1,47 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);
-
 body {
-	margin: 0;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	background-color: #2d3436;
-	font-family: Consolas;
-	font-size: 16px;
+  font-family: Arial, sans-serif;
 }
 
-body::-webkit-scrollbar {
-    width: 0.5em;
-}
- 
-body::-webkit-scrollbar-thumb {
-  	background-color: darkgrey;
-  	outline: 1px solid slategrey;
-}
-
-#boxe-console {
-	position: absolute;
-	padding: 10px;
-	top: 0; left: 0;
-	right: 0; bottom: 0;
-	color: rgba(245, 245, 245, 0.75);
-}
-
-.blinking-cursor {
-  font-weight: 100;
-  width: 5px;
-  font-size: 20px;
-  color: #2E3D48;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
-
-.command {
-	position: relative;
-	display: inline-block;
-}
-
-input {
-  min-width:1
-  0px!important;
-  font-family: Consolas;
-  font-size: 16px;
+/* Style du bouton principal */
+.dropbtn {
+  background-color: #4CAF50;
   color: white;
-  max-width:99.99%!important;
-  transition: width 0.25s;
-  outline: none;
-  background: none;
-  /*color: rgba(255, 255, 255, 0.75);*/
+  padding: 10px;
+  font-size: 16px;
   border: none;
-  color: transparent;
-  text-shadow: 0 0 0 rgba(255, 255, 255, 0.75);
-
-
-  &:focus {
-      outline: none;
-  }
+  cursor: pointer;
 }
 
-@keyframes "blink" {
-  	from, to {
-  	  color: transparent;
-  	}
-  	50% {
-  	  color: lime;
-  	}
+/* Style du conteneur de menu déroulant */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-@-moz-keyframes blink {
-  	from, to {
-  	  color: transparent;
-  	}
-  	50% {
-  	  color: lime;
-  	}
-}
-
-@-webkit-keyframes "blink" {
-	from, to {
-	  color: transparent;
-	}
-	50% {
-	  color: lime;
-	}
-}
-
-@-ms-keyframes "blink" {
-	from, to {
-	  color: transparent;
-	}
-	50% {
-	  color: lime;
-	}
-}
-
-@-o-keyframes "blink" {
-	from, to {
-	  color: transparent;
-	}
-	50% {
-	  color: lime;
-	}
-}
-
-#first {
+/* Style du contenu du menu déroulant (caché par défaut) */
+.dropdown-content {
   display: none;
-}
-
-#bloc-command {
-  display: none;
-}
-
-#boxe-battery {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  height: 30px;
-  width: 90px;
-  line-height: 30px;
-  text-align: left;
-  text-indent: 5px;
-  font-size: 35px;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-#boxe-battery > font {
   position: absolute;
-  left: 0;
-  height: 30px;
-  width: 40px;
-  line-height: 35px;
-  font-size: 12px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-#boxe-battery > i {
-  position: absolute;
-  right: 0;
+/* Style des liens du menu déroulant */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-#onclick {
-    background-color: blue;
+/* Change la couleur du lien lorsque la souris passe dessus */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
+/* Affiche le menu déroulant lorsque le bouton est survolé */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
