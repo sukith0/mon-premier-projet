@@ -15,10 +15,35 @@ article {
     box-shadow: whitesmoke 5px 5px 10px 0px;
     padding: 10px;
     margin-bottom: 20vh;
+    transition: 0.2s;
 
 
 
 }
+
+article:hover {
+    box-shadow: rgb(255, 0, 0) 5px 5px 10px 0px; /* x, y, largeur de diffusion de l'ombre*/
+    transition: 0.2s;
+    transform: translate3d(10px, 10px, 0px);
+    background-color: antiquewhite;
+    color: black;
+
+
+}
+
+article>p:hover {
+        color: rgb(255, 0, 0);
+
+
+}
+
+article>ul:hover {
+    color: rgb(255, 0, 0);
+
+
+}
+
+
 
 article>h2 {
     font-size: 2em;
@@ -49,6 +74,7 @@ article>ul{
 
 
 }
+
 
 
 
