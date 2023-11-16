@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/idk.css">
-  <title>Menu Déroulant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/idk.css">
+    <title>Site avec Menu Déroulant</title>
 </head>
 <body>
-  <div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-      <a href="#">Option 1</a>
-      <a href="#">Option 2</a>
-      <a href="#">Option 3</a>
-    </div>
+
+    <header>
+        <h1>Mon Site</h1>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À Propos</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Service 1</a></li>
+                    <li><a href="#">Service 2</a></li>
+                    <li><a href="#">Service 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Contenu de la Page</h2>
+        <p>Bienvenue sur mon site. C'est juste un exemple.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Mon Site. Tous droits réservés.</p>
+  
+<section>
+  <h2>Contenu de la Page</h2>
+  <p>Bienvenue sur mon site. C'est juste un exemple.</p>
+</section>
+
+<footer>
+  <p>&copy; 2023 Mon Site. Tous droits réservés.</p>
+  <div class="buttons">
+      <button>Button 1</button>
+      <button>Button 2</button>
+      <button>Button 3</button>
   </div>
+
+</footer>
+
+
+<div class="custom-div">
+  <p>J'aime le zob</p>
+</div>
+
+
+
 </body>
 </html>

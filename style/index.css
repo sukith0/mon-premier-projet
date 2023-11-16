@@ -14,7 +14,6 @@ article {
     background-color: rgb(0, 0, 0);
     box-shadow: whitesmoke 5px 5px 10px 0px;
     padding: 10px;
-    margin-bottom: 20vh;
     transition: 0.2s;
 
 
@@ -47,21 +46,24 @@ article>ul:hover {
 
 article>h2 {
     font-size: 2em;
-    color: brown;
+    color: rgb(165, 21, 21);
 
 
 }
 
 article>h3 {
     font-size: 1.5em;
-    color: brown;
+    color: brown
 
 
 }
 
-.espace {
+.ytb {
 
-    height: 50vh;
+    width:960px; 
+    height:680px;
+    padding-bottom: 20vh;
+    margin-left: 13vw;
 }
 
 article>p, article>li{
@@ -75,6 +77,34 @@ article>ul{
 
 }
 
+
+.spotify {
+    
+    transition: 1s;
+    
+
+
+     
+}
+
+.espace {
+
+    height: 70vh;
+    width: 100%;
+    background-image: url(../assets/dinguerie.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    
+}
+
+.spotify:hover {
+    
+    transition: 1s;
+    transform: translate3d(10px, 10px, 0px);
+}
 
 
 
