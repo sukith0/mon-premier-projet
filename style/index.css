@@ -30,7 +30,7 @@ article:hover {
 
 }
 
-article>p:hover {
+article>p:hover, .ahoui2:hover {
         color: rgb(255, 0, 0);
 
 
@@ -44,14 +44,14 @@ article>ul:hover {
 
 
 
-article>h2 {
+article>h2, .ahoui {
     font-size: 2em;
     color: rgb(165, 21, 21);
 
 
 }
 
-article>h3 {
+article>h3, {
     font-size: 1.5em;
     color: brown
 
@@ -64,6 +64,7 @@ article>h3 {
     height:680px;
     padding-bottom: 20vh;
     margin-left: 13vw;
+    margin-top: 10vh;
 }
 
 article>p, article>li{
@@ -81,10 +82,11 @@ article>ul{
 .spotify {
     
     transition: 1s;
-    
-
-
-     
+    width:1000px; 
+    height:200px;
+    margin-top: 10vh;
+   
+   
 }
 
 .espace {
@@ -105,6 +107,51 @@ article>ul{
     transition: 1s;
     transform: translate3d(10px, 10px, 0px);
 }
+
+
+.espace2 { 
+    height: 10vh;
+    width: 100%;
+    
+
+
+}
+
+.discord {
+    width: 350px;
+    height: 400px;
+    margin-left: 5%;
+    display: inline-block;
+    transition: 0.2s;
+   
+
+}
+
+.article1 {
+    width: 60%;
+    display: inline-block;
+    margin-left: 5%;
+
+
+}
+
+.didi {
+    display: flex;
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+  }
+
+  .discord:hover {
+    transition: 0.2s;
+    transform: translate3d(10px, 10px, 0px);
+    box-shadow: rgb(0, 0, 0) 5px 5px 10px 0px;
+
+
+
+  }
+
+
+
 
 
 

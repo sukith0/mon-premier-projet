@@ -1,3 +1,12 @@
+@font-face {
+        font-family: "goofy";
+        src: url("../assets/WholecarWhite_PERSONAL_USE_ONLY.otf");
+    }
+
+
+
+
+
 h3 {color: darkred;
     font-size: 2.5rem;/*rem pour adapter à tout kles appareil ou em*/
 
