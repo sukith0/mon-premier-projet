@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/javascript.css">
+    <!--<script src="../truc/don.js"></script>-->
+    <script src="../truc/games.js" defer></script>
     <title>JavaScript</title>
     
 
@@ -25,7 +28,7 @@
         
             <a class="bouton" href="../index.htm">Accueil</a>
             <a class="bouton" href="../pages/cv.htm">cv</a>
-            <a class="bouton" href="">JavaScript</a>
+            <a class="bouton" href="../pages/javascript.htm">JavaScript</a>
             <a class="bouton" href="../pages/javascript.htm">YAHOUUU</a>
    
             
@@ -45,9 +48,19 @@
         </nav>
 
         <main>
+            <div id="gameMenu" class="gameContainer">
+                
+                <label for="menu">Choose ur game challenger!</label>
+                
+                <select name="menu" id="menu">
+                <option value="0">--Choisissez--</option>
+                <option value="1">Guess the number!</option>
+                </select>
+            
+            </div>
 
-            <iframe src="https://discordapp.com/widget?id=1171129292571299942&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-          
+            <div id="gameZone" class="gameContainer"></div>
+           
        
 
         </main>
