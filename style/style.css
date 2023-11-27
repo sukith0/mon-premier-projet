@@ -32,7 +32,7 @@ header {
     position: fixed;
 
     width: 100vw;
-    height: 20vh; /*vh pourcentage d'écran*/
+    height: 30vh; /*vh pourcentage d'écran*/
     background-color: rgb(78, 0, 0);
     color: antiquewhite;
     font-family: fantasy;
@@ -102,11 +102,10 @@ nav {
     color: rgb(255, 83, 20);
     gap: 5vh;
     position: fixed;
-    top: 20vh;
+    top: 30vh;
     z-index: 10;
-    
-    
-    
+    transition: transform 1s;
+    left: -20vw;
     
     
 }
@@ -123,7 +122,7 @@ nav {
     border: rgb(210, 210, 210) 1px solid;
     transition: 0.2s;
     margin-top: 30px;
-    width: 25vh;
+    width: 20vh;
     margin-left: 5vh;
     
 
@@ -168,9 +167,10 @@ nav {
 main {
     width: 80vw/*pourcentage décran*/;
     position: relative;
-    top: 20vh;
-    left: 20vw;
-    width: 80vw;
+    top: 30vh;
+    left: 0vw;
+    width: 100vw;
+    transition: width 1s, left 1s;
 
 
 }
