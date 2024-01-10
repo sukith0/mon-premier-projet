@@ -1,89 +1,141 @@
-let menu=document.getElementById("menu") /*recup element html*/
-let zone=document.getElementById("gameZone")
+/*Récupération des élèments html*/
 
-/* definit fonctions*/
+let menu = document.getElementById("menu")
+let zone = document.getElementById("gameZone")
+
+/*définit les functions*/
 
 function menuChange() {
-    switch(menu.value)  {
-        case"1":
+    switch(menu.value) {
+        case '1':
             fairNumber()
             break
-        default:
-            reset ()
+        case '2':
+            ticTacDoe()
             break
-
-    }
+        default : 
+            reset()
+            break
+    }  
 }
-    
-    function reset () {
-        zone.innerHTML=""
 
-    }
+function reset() {
+    zone.innerHTML = ""
+}
 
-    function fairNumber() {
+/**
+ * Cette fonction déclenche le jeu du juste nomnbre
+ */
+function fairNumber() {
+    /*initialiser la zone*/
+    reset()
+    zone.innerHTML = "<h2>Le jeu du juste nombre</h2>"
 
-        reset()
+    /*on initialise les variables*/
+    let randomTarget = Math.floor(Math.random() * 100) +1
+    console.log(randomTarget)
+    let count = 0
+    let isOver = false
+    let userNumber = null
+    let message = ""
 
-        zone.innerHTML="<h2>Bon jeu mon gâté!</h2>"
+    let inputLine = document.createElement('div')
+    inputLine.classList.add('inputLine')
+    zone.appendChild(inputLine)
 
+    /*on ajoute des élèments html*/
+    let playerInput = document.createElement("input")
+    playerInput.setAttribute('type', 'text')
+    playerInput.setAttribute('id', 'playerInput')
+    playerInput.setAttribute('placeholder', 'Tapez votre proposition')
 
-        let randomTarget=Math.floor(Math.random()*100)+1
-        console.log(randomTarget)
-        let count=0
-        let playerInput=document.createElement("input")
-        playerInput.setAttribute("type", "text")
-        playerInput.setAttribute("id", "playerInput")
-        playerInput.setAttribute("placeholder", "Devine mon ptit zizitop3000")
+    let inputLabel = document.createElement("label")
+    inputLabel.setAttribute('for', 'playerInput')
+    inputLabel.innerHTML = "Devinez un nombre entre 1 et 100"
+
+    let submitButton = document.createElement("button")
+    submitButton.innerHTML ="Valider"
+    submitButton.addEventListener('click', compareNumber)
+
+    inputLine.appendChild(inputLabel)
+    inputLine.appendChild(playerInput)
+    inputLine.appendChild(submitButton)
+
+    let messageZone = document.createElement('div')
+    zone.appendChild(messageZone)
+    /*le fonctionnement du jeu*/
+    function compareNumber() {       
         
-        let inputLabel=document.createElement("label")
-        inputLabel.setAttribute("for", "playerInput")
-        inputLabel.innerHTML="devine le chiffre entre 1 et 100 poto"
-        let submitButton=document.createElement("button")
-        submitButton.innerHTML="valide man pote"
-        submitButton.addEventListener("click", compareNumber)
+        count++
 
-        
-        zone.appendChild(inputLabel)
-        zone.appendChild(playerInput)
-        zone.appendChild(submitButton)
-
-        function compareNumber () {
-                console.log("check")
-                count++
-
-                let userNumber=parseInt(playerInput.value)
-                let message=`coup n°${count} - proposition ${userNumber} -`
-                if (isNaN(userNumber)) {
-                        message="il faut un chiffre frérot tu crois arnaquer qui là"
-                    }  
-                    else if(randomTarget<userNumber) {
-                        message+="trop grand l'équipage"
-                    }
-                    else if (randomTarget>userNumber) {
-                        message+="trop petit man poteeee aaaa"
-                    } 
-                    else {
-                        message+=`Au nom c'est ça, t'a trouvé en ${count} coups mon bg à la crème anglaise`
-                    }
-
-                    let newMessage=document.createElement("p")
-                    newMessage.innerHTML=message
-                    zone.appendChild(newMessage)
-                    return true
-
+        userNumber = parseInt(playerInput.value)
+        message = `coup n°${count} - proposition : ${userNumber} - `
+      
+        if(isNaN(userNumber)){
+            message = "il faut entrer un nombre"
+        }else if(userNumber > randomTarget) {
+            message += "C'est trop grand"
+        } else if (userNumber < randomTarget){
+            message += "C'est trop petit"
+        } else {
+            message += `bravo vous avez trouvé`
+            isOver = true
         }
-    
+
+        let newMessage = document.createElement('p')
+        newMessage.classList.add("fairLine")
+        newMessage.innerHTML = message
+        messageZone.appendChild(newMessage)
+
+        if(isOver) {
+            zone.removeChild(inputLine)
+            let resetButton = document.createElement('button')
+            resetButton.innerHTML ="Recommencer"
+            resetButton.addEventListener('click', fairNumber)
+
+            zone.appendChild(resetButton)
+        }
+        
     }
 
-    
-    /*if(menu.value=="0") {
-        zone.style.backgroundColor="darkred"
+}
+
+function ticTacDoe() {
+    reset()
+    console.log('jeu du morpion')
+
+    let squares=[]
+
+    let infoPanel = document.createElement('div')
+    infoPanel.classList.add('infoPanel')
+
+    let grid = document.createElement('div')
+    grid.classList.add('grid')
+
+    zone.appendChild(infoPanel)
+    zone.appendChild(grid)
+    zone.classList.add('ttdZone')
+
+    for(let i=0; i<9; i++) {
+        let square=document.createElement('div')
+        square.classList.add('square')
+        grid.appendChild(square)
+        squares.push(square)
     }
-    else if (menu.value=="1")
-        zone.style.backgroundColor="rgb(155, 0, 31)"*/
 
+    for(let i=0; i<9; i++) {
+        console.log(squares[i])
+        squares[i].addEventListener('click', squareClick.bind(squares[i]))
+    }
 
-/*on configure les events*/
+    console.log(squares)
+
+    function squareClick() {
+        console.log('click')
+        this.style.backgroundImage='url("../assets/rouge.png")'
+    }
+
+}
+/*on configure les évènements*/
 
 menu.addEventListener("change", menuChange)
-
